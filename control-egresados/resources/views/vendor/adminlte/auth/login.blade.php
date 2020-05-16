@@ -1,7 +1,7 @@
 @extends('adminlte::layouts.auth')
 
 @section('htmlheader_title')
-    Log in
+    Iniciar Sesión
 @endsection
 
 @section('content')
@@ -9,7 +9,7 @@
     <div id="app">
         <div class="login-box">
             <div class="login-logo">
-                <a href="{{ url('/home') }}"><b>Admin</b>LTE</a>
+                <a href="{{ url('/home') }}">Control-Egresados ITSX</a>
             </div><!-- /.login-logo -->
 
         @if (count($errors) > 0)
@@ -39,20 +39,16 @@
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
-                            <input type="checkbox" name="remember"> {{ trans('adminlte_lang::message.remember') }}
+                            <input type="checkbox" name="remember"> Recordarme
                         </label>
                     </div>
                 </div><!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('adminlte_lang::message.buttonsign') }}</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Iniciar Sesion</button>
                 </div><!-- /.col -->
             </div>
         </form>
-
-        @include('adminlte::auth.partials.social_login')
-
-        <a href="{{ url('/password/reset') }}">{{ trans('adminlte_lang::message.forgotpassword') }}</a><br>
-        <a href="{{ url('/register') }}" class="text-center">{{ trans('adminlte_lang::message.registermember') }}</a>
+        <a href="{{ url('/register') }}" class="text-center">Registrarse</a>
 
     </div><!-- /.login-box-body -->
 
